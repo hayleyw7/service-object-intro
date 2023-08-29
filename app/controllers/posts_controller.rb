@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    IncrementService.new(@post).increment_views
   end
 
   # GET /posts/new
