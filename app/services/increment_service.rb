@@ -6,4 +6,8 @@ class IncrementService
   def increment_views
     @resource.increment!(:views)
   end
+
+  def call
+    increment_views
+  end
 end
